@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>钟表</title>
     <style id="css">
         html {
             height: 100%;
@@ -16,9 +16,8 @@
             font-family: 'helvetica neue';
             text-align: center;
             font-size: 10px;
-
         }
-
+        
         body {
             margin: 0;
             font-size: 2rem;
@@ -28,7 +27,7 @@
             align-items: center;
             justify-content: center;
         }
-
+        
         .clock {
             width: 30rem;
             height: 30rem;
@@ -36,20 +35,16 @@
             border: 2px solid white;
             position: relative;
             padding: 2rem;
-            box-shadow:
-                0 0 0 4px rgba(0, 0, 0, .1),
-                inset 0 0 0 3px #efefef,
-                inset 0 0 5px black,
-                0 0 10px rgba(0, 0, 0, .2);
+            box-shadow: 0 0 0 4px rgba(0, 0, 0, .1), inset 0 0 0 3px #efefef, inset 0 0 5px black, 0 0 10px rgba(0, 0, 0, .2);
         }
-
+        
         .clock-face {
             position: relative;
             width: 100%;
             height: 100%;
             transform: translateY(-3px);
         }
-
+        
         .hand {
             width: 50%;
             height: 6px;
@@ -60,7 +55,7 @@
             transform: rotate(90deg);
             transition: all 0.05s;
         }
-
+        
         .circle {
             width: 15px;
             height: 15px;
@@ -71,39 +66,12 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
-
-        .clock-face ul {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            list-style: none;
-        }
-
-        .clock-face ul li {
-            width: 2px;
-            height: 6px;
-            background: #000;
-            position: absolute;
-            left: 99px;
-            top: 0;
-            transform-origin: center 100px;
-        }
-
-        .clock-face ul li:nth-of-type(5n+1) {
-            height: 12px;
-            transform: rotate(42deg);
-        }
     </style>
 </head>
 
 <body>
     <div class="clock">
         <div class="clock-face">
-            <ul id="list"></ul>
             <div class="circle"></div>
             <div class="hand hour-hand"></div>
             <div class="hand min-hand"></div>
@@ -112,20 +80,12 @@
     </div>
     <script>
         //获取到刻度
-        var list = document.getElementById("list");
-        var oCss = document.getElementById("css");
+
         const secondHand = document.querySelector('.second-hand');
         const minsHand = document.querySelector('.min-hand');
         const hourHand = document.querySelector('.hour-hand');
 
-        var oLi = "";
-        var sCss = "";
-        for (var i = 0; i < 60; i++) { //一个表盘总共是60个刻度
-            sCss += ".clock-face ul li:nth-of-type(" + (i + 1) + "){transform: rotate(" + i * 6 + "deg);}";
-            oLi += "<li></li>";
-        };
-        list.innerHTML = oLi;
-        oCss.innerHTML += sCss;//表盘刻度渲染完成
+
 
         function setDate() {
             const now = new Date();
