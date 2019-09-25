@@ -53,7 +53,7 @@ function init() {
             arr.push(item);
         }
         // Math.random() 0~1 之间的一个随机数
-        // 数组长度 ~ col*col  Math.floor向下取整
+        // 数组长度 ~ col*col  Math.floor向下取整 Math.ceil(1/2) 向上取整  parseInt(1/2)取整
         let randomIndex = Math.floor(Math.random() * col * col);
         arr[randomIndex] = `<div class="block" id="special" style="background-color:#${specialColor};
         width:${blockWidth}%">
