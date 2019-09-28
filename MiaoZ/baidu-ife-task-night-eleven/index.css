@@ -129,7 +129,7 @@ header .creat .profile {
 
 .header2 .items {
     padding: 87px 292px 126px;
-    display: flex;
+    float: left;
     box-sizing: border-box;
 }
 

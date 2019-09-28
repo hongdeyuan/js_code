@@ -7,8 +7,12 @@
  
  git checkout -b master dhyuan/master
  
+//重新从github或码云上，clone一份代码，然后把本地修改的复制进去，这个方法适合修改内容不多的朋友
+git fetch --all 
+
 拉远程代码步骤
 git remote -v
+
 
 git remote add sylu http://192.168.60.43:18001/sylu/tra-lease-ea
 
@@ -31,6 +35,28 @@ git checkout -b dev origin/dev
 git push dhyuan dev
 
 git remote remove dhyuan
+
+
+
+
+
+mkdir gitLearn/生成文件夹
+
+git config --global username="dhyuan" /添加git用户名
+git config --global email=1745646@qq.com /添加邮箱
+
+git  init /初始化本git仓库
+
+/新增一个文件 index.html
+
+git add index.html/添加新增文件到 git 暂存区
+
+git commit -m'feat:新增了 index.html文件'
+
+git remote add dhyuan url(远程连接地址) 
+
+git push -u dhyuan master /推送到 dhyuan(dhyuan 为远程连接的别名 ) master 为分支名称
+
 
 
 
