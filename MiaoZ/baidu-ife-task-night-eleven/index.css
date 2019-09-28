@@ -44,7 +44,7 @@ header .text {
 }
 
 header .title {
-    margin-top: 208px;
+    margin-top: 120px;
 }
 
 header .creat {
@@ -54,8 +54,8 @@ header .creat {
     text-align: center;
     margin: 0 auto;
     margin-top: 104px;
-    margin-bottom: 220px;
     padding: 61px 100px 52px;
+    margin-bottom: 120px;
     box-sizing: border-box;
 }
 
@@ -98,6 +98,7 @@ header .creat .profile {
 
 .header2 {
     background: rgba(100, 100, 100, 0.2);
+    position: relative;
     background-size: 100%;
     box-sizing: border-box;
     padding-top: 102px;
@@ -128,10 +129,73 @@ header .creat .profile {
 }
 
 .header2 .items {
-    padding: 87px 292px 126px;
-    float: left;
+    padding: 87px 0 126px;
+    position: relative;
     box-sizing: border-box;
+    margin-bottom: 102px;
+    text-align: center;
 }
 
+.header2 .items .item1,
+.item2,
+.item3,
+.item4 {
+    display: inline-block;
+    position: relative;
+    margin-left: 50px;
+    width: 40%;
+    text-align: left;
+    text-indent: 20px;
+}
 
-/* .header2 .items .item1 {} */
+.header2 .items .iphone,
+.check,
+.setting,
+.pencil {
+    margin-left: 65px;
+}
+
+.header2 .items .iphone-icon,
+.check-icon,
+.setting-icon,
+.pencil-icon {
+    width: 80px;
+    position: absolute;
+}
+
+.header2 .items .iphone-icon .item-pe-iphone::before {
+    content: url(./images/Iphone-Icon.png);
+}
+
+.header2 .items .check-icon .item-pe-check::before {
+    content: url(./images/Check-Icon.png);
+}
+
+.header2 .items .setting-icon .item-pe-setting::before {
+    content: url(./images/Settings-Icon.png);
+}
+
+.header2 .items .pencil-icon .item-pe-pencil::before {
+    content: url(./images/Pencil-Icon.png);
+}
+
+.iphone-title,
+.check-title,
+.setting-title,
+.pencil-title {
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(20, 20, 20, 1);
+    line-height: 32px;
+}
+
+.iphone-text,
+.check-text,
+.setting-text,
+.pencil-text {
+    font-size: 16px;
+    font-weight: 200;
+    color: rgba(20, 20, 20, 1);
+    line-height: 26px;
+    opacity: 0.7;
+}
