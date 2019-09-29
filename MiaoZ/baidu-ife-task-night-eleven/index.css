@@ -101,7 +101,6 @@ header .creat .profile {
     position: relative;
     background-size: 100%;
     box-sizing: border-box;
-    padding-top: 102px;
 }
 
 .header2 .content2 {
@@ -132,7 +131,6 @@ header .creat .profile {
     padding: 87px 0 126px;
     position: relative;
     box-sizing: border-box;
-    margin-bottom: 102px;
     text-align: center;
 }
 
@@ -198,4 +196,67 @@ header .creat .profile {
     color: rgba(20, 20, 20, 1);
     line-height: 26px;
     opacity: 0.7;
+}
+
+.header3 {
+    background: url(./images/forest.png) 0 0 no-repeat;
+    background-size: 100%;
+}
+
+.header3 .mask {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 20, 20, 1);
+    opacity: .65;
+    overflow: hidden;
+}
+
+.header3 .mask .content3 {
+    width: 55%;
+    color: rgba(255, 255, 255, .2);
+    box-sizing: border-box;
+    padding: 182px 135px 182px;
+}
+
+.header3 .mask .content3 .material-title,
+t {
+    width: 367px;
+    font-size: 42px;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 1);
+    line-height: 52px;
+}
+
+.header3 .mask .content3 .material-text {
+    width: 367px;
+    font-size: 18px;
+    font-weight: 200;
+    margin-top: 47px;
+    color: rgba(255, 255, 255, 1);
+    line-height: 28px;
+    opacity: 0.7;
+}
+
+.header3 .mask .material-button {
+    box-sizing: border-box;
+    margin-top: 58px;
+}
+
+.header3 .mask .content3 .material-button input[name="check"] {
+    width: 240px;
+    height: 60px;
+    background: rgba(255, 255, 255, .8);
+    opacity: 0.35;
+    border: 1px solid rgba(255, 255, 255, .4);
+    border-radius: 2px;
+}
+
+.header3 .mask .content3 .material-button input[name="try"] {
+    width: 240px;
+    height: 60px;
+    margin-left: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, .8);
+    color: #fff;
+    border-radius: 2px;
 }
