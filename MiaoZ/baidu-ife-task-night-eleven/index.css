@@ -6,6 +6,7 @@
 header {
     background: url(./images/mount.png) 0 0 no-repeat;
     background-size: 100%;
+    height: 100vh;
 }
 
 header .mask {
@@ -100,7 +101,9 @@ header .creat .profile {
     background: rgba(100, 100, 100, 0.2);
     position: relative;
     background-size: 100%;
+    padding-top: 102px;
     box-sizing: border-box;
+    height: 100vh;
 }
 
 .header2 .content2 {
@@ -201,21 +204,24 @@ header .creat .profile {
 .header3 {
     background: url(./images/forest.png) 0 0 no-repeat;
     background-size: 100%;
+    height: 100vh;
 }
 
 .header3 .mask {
-    width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: rgba(20, 20, 20, 1);
     opacity: .65;
     overflow: hidden;
 }
 
 .header3 .mask .content3 {
-    width: 55%;
+    width: 50%;
     color: rgba(255, 255, 255, .2);
     box-sizing: border-box;
-    padding: 182px 135px 182px;
+    padding-left: 135px;
+    margin-top: 104px;
+    margin-bottom: 104px;
+    display: inline-block;
 }
 
 .header3 .mask .content3 .material-title,
@@ -243,7 +249,7 @@ t {
 }
 
 .header3 .mask .content3 .material-button input[name="check"] {
-    width: 240px;
+    width: 45%;
     height: 60px;
     background: rgba(255, 255, 255, .8);
     opacity: 0.35;
@@ -252,11 +258,31 @@ t {
 }
 
 .header3 .mask .content3 .material-button input[name="try"] {
-    width: 240px;
+    width: 45%;
     height: 60px;
     margin-left: 30px;
     border: 1px solid rgba(0, 0, 0, 0.4);
     background: rgba(0, 0, 0, .8);
     color: #fff;
     border-radius: 2px;
+}
+
+.header3 .mask .ipd {
+    display: inline-block;
+    height: 350px;
+    width: 35%;
+    opacity: 0.5;
+    border-top: 10px;
+    border-left: 20px;
+    border-bottom: 10px;
+    margin-right: 0;
+    padding-right: 0;
+    border-radius: 10px 0 0 10px;
+    margin-top: 15%;
+}
+
+.header3 .mask .ipd #ipd-icon {
+    background-size: cover;
+    width: 95%;
+    margin-right: 0;
 }
