@@ -1,10 +1,10 @@
 const package = require('./package.json');
 const images = require('images');
 console.log(package.version);
-const bg_image = images('./images/avatar.jpg');
+const bg_image = images('./images/timo.jpg');
 console.log(bg_image);
 
-const qg_image = images('./images/gq.jpeg');
+const qg_image = images('./images/gq.jpg');
 console.log(qg_image);
 
 const offset = {
@@ -23,4 +23,4 @@ const pos = {
     y: bg_image.height() - qg_image.height()
 
 }
-bg_image.draw(foreground_image, pos.x, pos.y).save('./images/result.jpg', { quality: 100 })
+bg_image.draw(foreground_image, pos.x, pos.y).save('./images/dhyuan.jpg', { quality: 100 })
