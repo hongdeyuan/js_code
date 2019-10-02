@@ -280,6 +280,7 @@ t {
 /* iPad */
 
 #ipad {
+    z-index: 50px;
     box-sizing: border-box;
     position: absolute;
     display: inline-block;
@@ -293,9 +294,9 @@ t {
 } */
 
 .ipadbody {
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.5);
     position: relative;
-    border: 5px solid rgba(0, 0, 0, 0.6);
+    border: 5px solid rgba(0, 0, 0, 0.3);
     height: 550px;
     width: 650px;
     border-radius: 20px 0 0 20px;
@@ -309,7 +310,8 @@ t {
     width: 625px;
     top: 36px;
     left: 50px;
-    opacity: 1;
+    opacity: 1.0;
+    filter: Alpha(Opacity=100);
 }
 
 .ipadcamera {
@@ -594,9 +596,15 @@ t {
     margin-left: 10px;
 }
 
-.header6 .person1-items .person1:hover {
-    transform: scale(1.1);
+.header6 .person1-items .person1 .person1-hover {
+    display: none;
 }
+
+
+/* .header6 .person1-items .person1 .person1-hover:hover {
+    display: block;
+    transform: scale(1.1);
+} */
 
 
 /* 第七个盒子 */
@@ -677,7 +685,7 @@ t {
 }
 
 .header7 .contact-info .contact-text {
-    margin-top: 1%;
+    margin-top: 5%;
     font-size: 16px;
     font-weight: 200;
     color: rgba(20, 20, 20, 1);
