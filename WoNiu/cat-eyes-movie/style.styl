@@ -1,0 +1,36 @@
+$hdgb_color = #e54847
+$font_color_white = #ffffff
+
+*
+    margin 0
+    padding 0
+
+ul 
+    li
+        list-style none
+
+html,body
+    width 100%
+
+.nav
+    height 1.067rem
+    font-size 18px
+    text-align center
+    line-height 1.067rem
+    background-color $hdgb_color
+    .arrow-left
+        float left
+        height 100%
+        position relative
+        &::after
+            content ''
+            width 14px;
+            height 14px
+            border 2px solid #fff
+            position absolute
+            top 50%
+            left 16px
+            transform: rotateZ(45deg) translateY(-50%)
+            border-width: 0 0 2px 2px
+    span
+        color $font_color_white
