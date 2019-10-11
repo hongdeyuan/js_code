@@ -9,6 +9,12 @@ html,
 body {
   width: 100%;
 }
+.flex {
+  display: flex;
+}
+.flex1 {
+  flex: 1;
+}
 .nav {
   height: 1.067rem;
   font-size: 18px;
@@ -130,4 +136,89 @@ body {
 .page .movie-header .movie-container .movie-content .movie-score .rating .rating-score {
   font-size: 0.4rem;
   color: #ff4600;
+}
+.page .movie-header .movie-container .movie-content .movie-detail {
+  font-size: 12px;
+  margin-bottom: 0.16rem;
+  opacity: 0.7;
+}
+.page .movie-header .movie-container .movie-content .movie-detail p {
+  margin-bottom: 0.14rem;
+}
+.page .movie-header .movie-container .movie-content .movie-detail p span {
+  vertical-align: middle;
+}
+.page .movie-header .movie-container .movie-content .movie-detail p img {
+  vertical-align: middle;
+  display: inline-block;
+  height: 0.3rem;
+}
+.page .movie-header .movie .operating {
+  margin-top: 0.5rem;
+}
+.page .movie-header .movie .operating div {
+  border: 1 solid rgba(255,255,255,0.4);
+  background-color: rgba(255,255,255,0.4);
+  font-size: 14px;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0.25rem 0;
+  border-radius: 4px;
+}
+.page .movie-header .movie .operating div img,
+.page .movie-header .movie .operating div span {
+  vertical-align: middle;
+}
+.page .movie-header .movie .operating .movie-watch {
+  margin-right: 0.3rem;
+}
+.page .movie-header .movie .operating .movie-watch img {
+  width: 14px;
+  height: 14px;
+}
+.page .movie-header .movie .operating .movie-mark img {
+  width: 18px;
+  height: 18px;
+}
+.page .section-seperate {
+  padding-top: 0.4rem;
+  margin-bottom: 0.3rem;
+  border-top: 1px solid #e5e5e5;
+}
+.page .section-expander {
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+}
+.page .section-expander .text-expander {
+  text-indent: 0.4rem;
+}
+.page .section-expander .text-expander__content.close {
+  min-height: 65px;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+.page .section-expander .text-expander__button {
+  height: 0.7rem;
+  text-align: center;
+}
+.page .section-expander .text-expander__button .icon-shevron__down {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #aaa;
+  display: inline-block;
+  transform: rotateZ(45deg);
+  border-width: 0 1px 1px 0px;
+  box-sizing: border-box;
+}
+.page .section-expander .text-expander__button .icon-shevron__down__change {
+  transform: rotateZ(-135deg);
+}
+#toast {
+  display: none;
 }

@@ -12,6 +12,11 @@ ul
 html,body
     width 100%
 
+.flex
+    display flex
+
+.flex1
+    flex 1
 .nav
     height 1.067rem
     font-size 18px
@@ -115,3 +120,72 @@ html,body
                             .rating-score
                                 font-size .4rem
                                 color #ff4600
+                    .movie-detail
+                        font-size 12px
+                        margin-bottom 0.16rem
+                        opacity .7
+                        p
+                            margin-bottom 0.14rem
+                            span
+                                vertical-align middle
+                            img
+                                vertical-align middle
+                                display inline-block
+                                height .3rem
+            .operating
+                margin-top 0.5rem
+                div
+                    border 1 solid rgba(255,255,255,0.4)
+                    background-color rgba(255,255,255,0.4)
+                    font-size 14px
+                    color $font_color_white
+                    position relative
+                    z-index 2
+                    text-align center
+                    padding 0.25rem 0
+                    border-radius 4px
+                    img,span
+                        vertical-align middle
+                .movie-watch
+                    margin-right 0.3rem
+                    img 
+                        width 14px
+                        height 14px
+                .movie-mark
+                    img 
+                        width 18px
+                        height 18px
+    .section-seperate
+        padding-top 0.4rem
+        margin-bottom 0.3rem
+        border-top 1px solid #e5e5e5
+    .section-expander
+        padding-left .4rem
+        padding-right .4rem
+        .text-expander
+            text-indent .4rem
+            &__content.close
+                min-height 65px
+                display -webkit-box
+                overflow hidden
+                text-overflow ellipsis
+                -webkit-line-clamp 3
+                -webkit-box-orient vertical
+                word-break break-all
+            &__button
+                height 0.7rem
+                text-align center
+                .icon-shevron__down
+                    width 10px
+                    height 10px
+                    border 1px solid #aaaaaa
+                    display inline-block
+                    transform rotateZ(45deg)
+                    border-width 0 1px 1px 0px
+                    box-sizing border-box
+                .icon-shevron__down__change
+                    transform rotateZ(-135deg)
+#toast
+    display none
+
+

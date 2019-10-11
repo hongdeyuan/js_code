@@ -40,24 +40,66 @@
                         <div class="movie-score">
                             <div class="relesaed-score">
                                 <div class="rating" id="rating">
+                                    <!-- <img src="./images/star.png" alt="">
                                     <img src="./images/star.png" alt="">
                                     <img src="./images/star.png" alt="">
                                     <img src="./images/star.png" alt="">
-                                    <img src="./images/star.png" alt="">
-                                    <img src="./images/star-h.png" alt="">
-                                    <span class="rating-score">9.7</span>
+                                    <img src="./images/star-h.png" alt=""> -->
+                                    <span class="rating-score"></span>
                                 </div>
                                 <div class="score-num">
                                     (<span id="score-num"></span>人评分)
                                 </div>
                             </div>
+                            <div class="movie-detail">
+                                <p class="movie-type">
+                                    <span>剧情</span>
+                                    <img src="https://s0.meituan.net/bs/?f=myfe/canary:/asgard/images/movie/movie-tag-2DIMAX.png" alt="">
+                                </p>
+                                <p class="address-time">
+                                    <span class="address">zhongguo</span> /
+                                    <span class="time">155</span> 分钟
+                                </p>
+                                <p class="date">2019</p>
+                            </div>
                         </div>
+
                     </div>
+                </div>
+                <div class="operating flex">
+                    <div class="movie-watch flex1">
+                        <img src="./images/heart.png" alt="">
+                        <span>想看</span>
+                    </div>
+                    <div class="movie-mark flex1">
+                        <img src="./images/star2.png" alt="">
+                        <span>评分</span>
+                    </div>
+                </div>
+            </div>
 
-
+        </section>
+        <!-- section2 -->
+        <section class="section-seperate section-expander">
+            <div class="text-expander">
+                <div class="text-expander__content close">
+                    <p id="desc">ffffffdasdasdafa题为
+                    </p>
+                </div>
+                <div class="text-expander__button">
+                    <i class="icon-shevron__down"></i>
+                    <!-- <i class="icon-shevron__down1"></i> -->
                 </div>
             </div>
         </section>
+        <div id="toast">
+            <div class="weui-mask__transparent"></div>
+            <div class="weui-toast">
+                <i class="weui-icon-success-no-circle weui-icon_toast"></i>
+                <p class="weui-toast__content">已标记为想看</p>
+            </div>
+        </div>
+
     </div>
     <script>
         (function() {
@@ -71,9 +113,69 @@
                     $('#movie-ename').html(res.data.nameEnglish);
                     $('#score-num').html(res.data.people);
                     $('.rating-score').html(res.data.grade);
+                    star(res.data.star);
+                    $('.address-time .address').html(res.data.where)
+                    $('.address-time .time').html(res.data.time)
+                    $('.movie-detail .date').html(res.data.date)
+                    $('#desc').html(res.data.desc);
+
                 }
 
             })
+
+            function star(e) {
+                let num = Math.floor(e);
+                let left = 5 - Math.ceil(e);
+                if (left > 0) {
+                    for (let j = 0; j < left; j++) {
+                        $('#rating').prepend('<img src="./images/star2.png" alt="">');
+                    }
+                }
+                if (e > num) {
+                    //prepend插入节点是插在之前的
+                    $('#rating').prepend('<img src="./images/star-h.png" alt="">');
+                }
+                //逻辑修改
+                for (let i = 0; i < num; i++) {
+                    $('#rating').prepend('<img src="./images/star.png" alt="">');
+                }
+            }
+
+
+            //点击想看
+            //  document.querySelector('.movie-watch').addEventListener('click',()=>{
+
+            //  })
+
+            $('.movie-watch').click(function() {
+                if ($(this).hasClass('active')) {
+                    $('.movie-watch').removeClass('active');
+                    $('.movie-watch img').attr('src', './images/heart.png');
+                    $('#toast .weui-toast__content').html('已取消想看！');
+
+                } else {
+                    $('.movie-watch').addClass('active');
+                    $('.movie-watch img').attr('src', './images/heart1.png');
+                    $('#toast .weui-toast__content').html('已标记为想看！');
+                }
+                $('#toast').css('display', 'block');
+                setTimeout(() => {
+                    $('#toast').css('display', 'none');
+                }, 1500);
+
+            })
+
+            //点击下拉
+            $('.text-expander').click(function() {
+                if ($('.text-expander__content').hasClass('close')) {
+                    $('.text-expander__content').removeClass('close')
+                    $('.icon-shevron__down').addClass('icon-shevron__down__change')
+                } else {
+                    $('.text-expander__content').addClass('close')
+                    $('.icon-shevron__down').removeClass('icon-shevron__down__change')
+                }
+            })
+
         })()
     </script>
 </body>

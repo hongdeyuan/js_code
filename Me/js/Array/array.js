@@ -7,6 +7,7 @@ function employee(name, job, born) {
     this.name = name;
     this.job = job;
     this.born = born;
+    this.a = 5;
 }
 
 
@@ -21,6 +22,11 @@ console.log(typeof bill.constructor);
 
 employee.prototype.salary = 20000;
 
+let efunc = new employee();
+
+console.log('工作 ：' + efunc.salary)
+
+
 function MyClass(name, age) {
     this.name = name;
     this.age = age;
@@ -29,11 +35,19 @@ function MyClass(name, age) {
     }
 }
 
+
+
+
 //使用prototype添加一个方法
 MyClass.prototype.exam = function() {
     console.log("姓名 ：" + this.name);
 }
 var cls1 = new MyClass("dhyuan", 10);
+
+console.log('MyClass.constructor.prototype \t' + cls1.constructor.prototype)
+
+// console.log('MyClass.constructor.prototype.prototype \t' + MyClass.constructor.prototype.prototype)
+
 
 cls1.exam()
 cls1.toString('袁德红', '22');
