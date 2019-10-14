@@ -92,6 +92,43 @@
                 </div>
             </div>
         </section>
+        <!-- section3 -->
+        <section class="section-seperate">
+            <p class="action-list section-til">演职人员</p>
+            <ul class="movie-celebrities">
+                
+            </ul>
+        </section>
+        <!-- section4 -->
+        <section class="section-seperate section-expander movie-booking">
+            <p class="section-til">票房</p>
+                <div class="weui-flex">
+                    <div class="weui-flex__item">
+                      <div class="placeholder">
+                            <span id="ranking">31231</span>
+                            <p>昨日票房排行</p>
+                      </div>
+                    </div>
+                    <div class="weui-flex__item">
+                      <div class="placeholder">
+                            <span id="bookingWeek">31231</span>
+                            <p>首周票房（万）</p>
+                      </div>
+                    </div>
+                    <div class="weui-flex__item">
+                      <div class="placeholder">
+                            <span id="bookingTotal">31231</span>
+                            <p>累计票房（万）</p>
+                      </div>
+                    </div>
+                </div>
+        </section>
+
+         <!-- section5 -->
+        <section class="section-seperate movie-photo">
+            <p class="action-list section-til">视频和剧照</p>
+            <ul class="movie-photo__list"></ul>
+        </section>
         <div id="toast">
             <div class="weui-mask__transparent"></div>
             <div class="weui-toast">
@@ -114,6 +151,8 @@
                     $('#score-num').html(res.data.people);
                     $('.rating-score').html(res.data.grade);
                     star(res.data.star);
+                    celebrities(res.data.person);
+                    moviePhoto(res.data.pictures);
                     $('.address-time .address').html(res.data.where)
                     $('.address-time .time').html(res.data.time)
                     $('.movie-detail .date').html(res.data.date)
@@ -135,9 +174,42 @@
                     //prepend插入节点是插在之前的
                     $('#rating').prepend('<img src="./images/star-h.png" alt="">');
                 }
-                //逻辑修改
+                //逻辑修改 prepend 向前添加
                 for (let i = 0; i < num; i++) {
                     $('#rating').prepend('<img src="./images/star.png" alt="">');
+                }
+            }
+            //演职人员 append顺序添加 (let n  of e ) ->  es6 循环
+            function celebrities(e) {
+                for (let i = 0; i < e.length; i++) {
+                    $('.movie-celebrities').append(`
+                    <li>
+                        <a href="#" class="link">
+                            <div class="movie-celebrities__pic">
+                                <img src="${e[i].avatal}" alt="">
+                            </div>
+                            <span class="moie-celebrities-nick">${e[i].name}</span>
+                            <span class="movie-celebrities-roles">${e[i].sort}</span>
+                        </a>
+                    </li>
+                    `);
+                    
+                }
+            }
+
+            //电影剧照
+            function moviePhoto(e) {
+                for (let data of e) {
+                    $('.movie-photo__list').append(`
+                        <li class="stage-img-container">
+                            <a href="#" class="link">
+                                <div class="movie-celebrities__pic">
+                                    <img src="${data}" alt="">
+                                </div>
+                            </a>
+                        </li>
+                    `);
+                    
                 }
             }
 

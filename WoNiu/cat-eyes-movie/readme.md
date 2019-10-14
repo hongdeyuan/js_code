@@ -8,3 +8,5 @@
     -webkit-line-clamp 3
     -webkit-box-orient vertical
     word-break break-all
+- transition
+    transition transform .5s 用来监听tranform 给一个时间过渡
